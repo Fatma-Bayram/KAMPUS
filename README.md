@@ -41,3 +41,9 @@ GitHub bağlantısı: [Repository bağlantınızı buraya ekleyin]
 - TEST_NOTLARI.md
 - AI_NOTLARI.md
 - screenshots klasöründeki ekran görüntüleri
+
+## Proje Geliştirme
+
+Bu proje HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
+Etkinlikler sayfasında kullanıcıların etkinlik başlıklarına göre arama
+yapabilmesi için canlı filtreleme özelliği bulunmaktadır.
