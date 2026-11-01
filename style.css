@@ -504,3 +504,27 @@ a {
         padding: 22px;
     }
 }
+
+/* Improve mobile layout and prevent horizontal overflow */
+@media (max-width: 390px) {
+    .container {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form,
+    .search-controls {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input,
+    button {
+        max-width: 100%;
+    }
+}
