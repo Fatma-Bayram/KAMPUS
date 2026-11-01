@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kampüs Yaşamı etkinliklerini keşfet ve ara">
+    <title>Etkinlikler | Kampüs Yaşamı</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Ana menü">
+            <a href="index.html" class="logo">Kampüs<span>Yaşamı</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html" class="active">Etkinlikler</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Takvimini oluştur</p>
+                <h1>Kampüs Etkinlikleri</h1>
+                <p>İlgi alanına uygun etkinliği bul, kampüsün bir parçası ol.</p>
+            </div>
+        </section>
+
+        <section class="events-section container">
+            <div class="search-panel">
+                <label for="eventSearch">Etkinlik başlığına göre ara</label>
+
+                <div class="search-controls">
+                    <input
+                        type="search"
+                        id="eventSearch"
+                        placeholder="Örn. konser, teknoloji..."
+                        autocomplete="off"
+                    >
+
+                    <button type="button" id="clearSearch" class="btn btn-secondary">
+                        Temizle
+                    </button>
+                </div>
+
+                <p id="eventCount" class="event-count" aria-live="polite">
+                    6 etkinlik gösteriliyor.
+                </p>
+            </div>
+
+            <div class="events-grid" id="eventsGrid">
+
+                <article class="event-card">
+                    <div class="event-category">Kültür & Sanat</div>
+                    <h2 class="event-title">Kampüs Bahar Konseri</h2>
+                    <p class="event-date">📅 10 Kasım 2026</p>
+                    <p class="event-location">📍 Üniversite Açık Hava Sahnesi</p>
+                    <p>Canlı müzik ve eğlence dolu bir akşamda kampüs arkadaşlarınla buluş.</p>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-category">Teknoloji</div>
+                    <h2 class="event-title">Yapay Zekâ Atölyesi</h2>
+                    <p class="event-date">📅 12 Kasım 2026</p>
+                    <p class="event-location">📍 Bilgisayar Laboratuvarı</p>
+                    <p>Yapay zekâ araçlarını keşfet ve uygulamalı çalışmalarla yeni beceriler kazan.</p>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-category">Sosyal</div>
+                    <h2 class="event-title">Yeni Öğrenci Tanışma Günü</h2>
+                    <p class="event-date">📅 15 Kasım 2026</p>
+                    <p class="event-location">📍 Merkez Kampüs Bahçesi</p>
+                    <p>Yeni arkadaşlıklar kur, öğrenci topluluklarını tanı ve kampüsü keşfet.</p>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-category">Spor</div>
+                    <h2 class="event-title">Kampüs Voleybol Turnuvası</h2>
+                    <p class="event-date">📅 18 Kasım 2026</p>
+                    <p class="event-location">📍 Üniversite Spor Salonu</p>
+                    <p>Takımını kur, sporun ve dostça rekabetin heyecanını yaşa.</p>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-category">Kariyer</div>
+                    <h2 class="event-title">Kariyer ve Girişimcilik Zirvesi</h2>
+                    <p class="event-date">📅 20 Kasım 2026</p>
+                    <p class="event-location">📍 Konferans Salonu</p>
+                    <p>Uzmanlarla tanış, kariyer fırsatlarını öğren ve fikirlerini geliştir.</p>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-category">Çevre</div>
+                    <h2 class="event-title">Yeşil Kampüs Fidan Dikimi</h2>
+                    <p class="event-date">📅 22 Kasım 2026</p>
+                    <p class="event-location">📍 Kampüs Yeşil Alanı</p>
+                    <p>Daha yaşanabilir bir kampüs için doğaya katkıda bulun.</p>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>
+                Aradığınız başlıkla eşleşen etkinlik bulunamadı.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Kampüs Yaşamı</p>
+            <p>BPR201 - İnternet Tabanlı Programlama</p>
+        </div>
+    </footer>
+
+</body>
+</html>

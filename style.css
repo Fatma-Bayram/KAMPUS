@@ -1,0 +1,506 @@
+
+/* =========================
+   GENEL AYARLAR
+========================= */
+
+:root {
+    --primary: #5b4bdb;
+    --primary-dark: #4032b5;
+    --secondary: #f3f1ff;
+    --background: #f8f9fc;
+    --text: #20243a;
+    --muted: #697086;
+    --white: #ffffff;
+    --border: #e8e9f2;
+    --radius: 18px;
+    --shadow: 0 8px 30px rgba(35, 31, 90, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: var(--muted);
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* =========================
+   BUTONLAR
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: #e6e2ff;
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.btn-light:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ANA SAYFA HERO
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #f0edff, #e8f3ff);
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 1120px;
+}
+
+.eyebrow {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-description {
+    max-width: 580px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   TANITIM BÖLÜMÜ
+========================= */
+
+.intro-section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 38px;
+}
+
+.section-heading h2,
+.cta-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: var(--muted);
+}
+
+/* =========================
+   ALT ÇAĞRI BÖLÜMÜ
+========================= */
+
+.cta-section {
+    background: var(--primary);
+    color: var(--white);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.cta-section p {
+    margin-bottom: 25px;
+    color: #eeecff;
+}
+
+/* =========================
+   ALT SAYFA BAŞLIĞI
+========================= */
+
+.page-hero {
+    background: linear-gradient(135deg, #f0edff, #e8f3ff);
+    padding: 65px 0;
+}
+
+.page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.page-hero p:last-child {
+    color: var(--muted);
+}
+
+/* =========================
+   ETKİNLİKLER VE ARAMA
+========================= */
+
+.events-section {
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.search-panel {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.search-panel label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.search-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.search-controls input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #d8d9e5;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--background);
+    color: var(--text);
+}
+
+.search-controls input:focus {
+    outline: 3px solid #dcd7ff;
+    border-color: var(--primary);
+}
+
+.event-count {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.event-card {
+    background: var(--white);
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4ceff;
+}
+
+.event-category {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+}
+
+.event-card h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.event-card p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin-bottom: 10px;
+}
+
+.event-card .event-date,
+.event-card .event-location {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+
+.no-results {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    padding: 35px;
+    color: var(--muted);
+}
+
+/* =========================
+   HAKKIMIZDA
+========================= */
+
+.about-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.about-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.about-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    background: #20243a;
+    color: var(--white);
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: #d4d6e2;
+}
+
+/* =========================
+   MOBİL UYUMLULUK
+========================= */
+
+@media (max-width: 900px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 8px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 9px 10px;
+        font-size: 0.88rem;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .feature-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+
+    .search-controls .btn {
+        width: 100%;
+    }
+
+    .search-panel {
+        padding: 18px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-card {
+        padding: 22px;
+    }
+}
